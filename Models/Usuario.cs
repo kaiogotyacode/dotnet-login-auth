@@ -1,13 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LoginAuth.Models;
 
-public class Usuario
+public class Usuario 
 {
     [Key]
     public int UsuarioId { get; set; }
-
  
     [StringLength(100)]
     public string? Username { get; set; }

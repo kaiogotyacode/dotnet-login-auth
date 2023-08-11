@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LoginAuth.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LoginAuth.Controllers
 {
@@ -7,6 +8,11 @@ namespace LoginAuth.Controllers
       
         public IActionResult Index()
         {
+            if (TempData.ContainsKey("Usuario"))
+            {
+                ViewBag.Usuario = TempData["Usuario"] as Usuario;
+            }
+
             return View();
         }
      

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LoginAuth.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LoginAuth.Controllers
 {
@@ -12,6 +13,14 @@ namespace LoginAuth.Controllers
         public IActionResult SignUp()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult SignUp(Usuario usuario)
+        {
+           
+
+            return RedirectToAction("Index","Home");
         }
     }
 }
