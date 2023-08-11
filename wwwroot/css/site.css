@@ -39,3 +39,32 @@ body {
 .container{
     height: max-content;
 }
+
+.login-container{
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 15px #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+.form-container{
+    width: 80%;
+    height: 80%;
+}
+
+.login {
+    background-color: #d2dae2;
+}
+
+.signup {
+    background-color: #808e9b;
+}
