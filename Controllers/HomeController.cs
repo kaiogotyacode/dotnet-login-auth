@@ -7,11 +7,7 @@ namespace LoginAuth.Controllers
     {
       
         public IActionResult Index()
-        {
-            if (TempData.ContainsKey("Usuario"))
-            {
-                ViewBag.Usuario = TempData["Usuario"] as Usuario;
-            }
+        {           
 
             return View();
         }

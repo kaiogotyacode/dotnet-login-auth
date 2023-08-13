@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LoginAuth.Models;
 
-public class Usuario 
+public class UsuarioViewModel 
 {
     [Key]
     public int UsuarioId { get; set; }

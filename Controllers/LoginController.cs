@@ -14,13 +14,6 @@ namespace LoginAuth.Controllers
         {
             return View();
         }
-
-        [HttpPost]
-        public IActionResult SignUp(Usuario usuario)
-        {
-           
-
-            return RedirectToAction("Index","Home");
-        }
+      
     }
 }
