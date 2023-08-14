@@ -1,11 +1,10 @@
-﻿@model UsuarioViewModel
-@{
-    ViewData["Title"] = "Home Page";   
-}
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
 
-@if(Model != null)
+
+@if(SignInManager.IsSignedIn(User))
 {
-    <h1> Welcome back, @Model.Username </h1>
+    <h1> Welcome back, @User.Identity.Name </h1>
     <div class="container d-flex justify-content-center align-content-center">
         <div class="auth-container">
             <div class="auth-box is-auth">

@@ -1,16 +1,16 @@
-﻿
-<div class="login-container login">
+﻿<div class="login-container login">
     <h1> Login </h1>
-    <form class="form-container d-flex flex-column">
-        <div class="form-row">         
+    <form asp-action="Login" asp-controller="Login" method="post" class="form-container d-flex flex-column">
+
+        <div class="form-row">
             <div class="col-md-12">
-                <label for="email">E-mail</label>
-                <input type="text" class="form-control" id="email" placeholder="Type your e-mail here..." required>
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Type your username here...">
             </div>
             <div class="col-md-12 mt-3">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Your password..." required>
-            </div>         
+                <input type="password" class="form-control" name="password" id="password" placeholder="Your password...">
+            </div>
         </div>
         <button class="btn btn-secondary mt-3" type="submit"> Login </button>
     </form>

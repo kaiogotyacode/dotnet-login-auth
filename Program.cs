@@ -11,6 +11,14 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<AuthDbContext>()
                 .AddDefaultTokenProviders();
 
+builder.Services.Configure<IdentityOptions>(op =>
+{
+    op.Password.RequireUppercase = false;
+    op.Password.RequiredLength = 8;
+    op.Password.RequireLowercase = false;
+    op.Password.RequiredUniqueChars = 0;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -24,7 +24,7 @@ namespace LoginAuth.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("LoginAuth.Models.UsuarioViewModel", b =>
+            modelBuilder.Entity("LoginAuth.Models.Usuario", b =>
                 {
                     b.Property<int>("UsuarioId")
                         .ValueGeneratedOnAdd()
