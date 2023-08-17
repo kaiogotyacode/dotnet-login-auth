@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LoginAuth.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LoginAuth.Controllers
 {
@@ -6,7 +7,8 @@ namespace LoginAuth.Controllers
     {
       
         public IActionResult Index()
-        {
+        {           
+
             return View();
         }
      

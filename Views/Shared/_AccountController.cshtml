@@ -1,0 +1,20 @@
+﻿
+@if (SignInManager.IsSignedIn(User))
+{
+    <form method="post" asp-controller="Login" asp-action="Logout">
+        <li class="nav-item">            
+            <button type="submit" class="nav-link btn btn-danger"> Logout </button>          
+        </li>
+    </form>
+   
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-light bg-black" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-light bg-black" asp-area="" asp-controller="Login" asp-action="SignUp">Sign Up</a>
+    </li>
+}
+

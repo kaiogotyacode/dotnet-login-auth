@@ -1,0 +1,23 @@
+﻿@model UsuarioViewModel
+
+<div class="login-container signup">
+    <h1> SignUp</h1>
+    <form method="POST" asp-action="SignUp" asp-controller="Login" class="form-container d-flex flex-column">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="form-row">
+            <div class="col-md-12">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Type your username here..." required>
+                <span class="text-danger" asp-validation-for="Username"></span>
+            </div>
+         
+            <div class="col-md-12 mt-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Your password..." required>
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </div>
+            
+        </div>
+        <button class="btn btn-success mt-3" type="submit">Submit form</button>
+    </form>
+</div>
